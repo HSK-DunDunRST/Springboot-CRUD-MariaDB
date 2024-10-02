@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>커뮤니티 생성</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="my-4">
+            <h1>커뮤니티 생성</h1>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+            <a class="navbar-brand" href="/">홈</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/community/list">커뮤니티 목록</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <form action="/community/create" method="post">
+            <div class="form-group">
+                <label for="communityName">커뮤니티 이름</label>
+                <input type="text" class="form-control" id="communityName" name="communityName" required>
+            </div>
+            <button type="submit" class="btn btn-primary">커뮤니티 생성</button>
+        </form>
+
+        <footer class="mt-5 mb-3 text-center">
+            <p>© 2024 커뮤니티 게시판</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
