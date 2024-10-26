@@ -1,33 +1,35 @@
-# 커뮤니티 게시판 애플리케이션
+# Community Board Application
 
-이 프로젝트는 Spring Boot와 Thymeleaf를 사용하여 커뮤니티 게시판 애플리케이션을 개발한 것입니다. 사용자는 새로운 커뮤니티를 생성하고, 해당 커뮤니티에 게시글을 작성하며, 다른 게시글을 조회할 수 있습니다.
-**주의!** 이 프로젝트는 Microsoft Visual Code로 개발되었습니다. InteliJ IDEA에서 프로젝트를 작업할 경우 원활하게 되지 않을 수 있습니다.
+This project is a community board application developed using Spring Boot and Thymeleaf. Users can create new communities, post content within them, and browse posts created by others.
 
-## 기록
-- **2024.10.2** : GitHub에 Upload.
-- **Error** : 현재 발생되거나 검출된 에러는 없습니다.
+**Note:** This project was developed using Microsoft Visual Studio Code. Compatibility issues may arise if working with IntelliJ IDEA.
 
-## 기능
-- 커뮤니티 생성
-- 커뮤니티 목록 조회
-- 게시글 생성
-- 특정 커뮤니티에 속한 게시글 조회
-- 게시글 수정 및 삭제
+## Changelog
+- **2024.10.2**: Uploaded to GitHub.
+- **Current Errors**: No known or detected errors at this time.
 
-## 기술 스택
+## Features
+- Create communities
+- View a list of communities
+- Create posts
+- View posts within specific communities
+- Edit and delete posts
+
+## Tech Stack
 - **Backend**: Java, Spring Boot
 - **Frontend**: Thymeleaf, Bootstrap
-- **Database**: H2 (개발 및 테스트 환경), MariaDB (실제 배포 환경)
+- **Database**: H2 (development and testing), MariaDB (production)
 
-## 프로젝트 구조
-프로젝트는 다음과 같은 구조로 구성되어 있습니다:
+## Project Structure
 
-- **Controller**: 애플리케이션의 HTTP 요청을 처리하는 컨트롤러 클래스
-- **Entity**: 데이터베이스 테이블과 매핑되는 엔티티 클래스
-- **Repository**: 데이터베이스와의 상호작용을 처리하는 리포지토리 인터페이스
-- **Service**: 비즈니스 로직을 처리하는 서비스 클래스
-- **Templates**: Thymeleaf 템플릿 파일
+The project is organized as follows:
 
-## 사용 방법
+- **Controller**: Manages HTTP requests for the application.
+- **Entity**: Contains entity classes mapped to database tables.
+- **Repository**: Handles interactions with the database.
+- **Service**: Processes business logic for the application.
+- **Templates**: Thymeleaf template files for the front end.
 
-애플리케이션에 접속하면 커뮤니티 생성 버튼을 클릭하여 새로운 커뮤니티를 만들 수 있습니다. 생성된 커뮤니티를 클릭하면 해당 커뮤니티의 게시글 목록을 조회할 수 있으며, 게시글 작성 버튼을 통해 게시글을 추가할 수 있습니다. 게시글 제목을 클릭하면 게시글의 내용을 조회하고 수정 및 삭제할 수 있습니다.
+## How to Use
+
+Upon accessing the application, users can create a new community by clicking the "Create Community" button. After creating a community, users can click on it to view a list of posts in that community. They can also add new posts by clicking the "Create Post" button. By clicking on a post title, users can view, edit, or delete the post's content.
