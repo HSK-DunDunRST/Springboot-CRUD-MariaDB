@@ -3,9 +3,9 @@ spring:
     name: demo
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://127.0.0.1:3306/ttt
-    username: springHSK
-    password: spring6265
+    url: jdbc:mariadb://127.0.0.1:3306/DB_NAME  // 번경 필수
+    username: DB_USER  // 변경필수
+    password: DB_PASSWORD  // 변경필수
   jpa:
     show-sql: true
     hibernate:
