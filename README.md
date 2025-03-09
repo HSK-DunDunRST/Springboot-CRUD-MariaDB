@@ -1,35 +1,61 @@
-# Community Board Application
+## 커뮤니티 게시판 애플리케이션  
 
-This project is a community board application developed using Spring Boot and Thymeleaf. Users can create new communities, post content within them, and browse posts created by others.
+### 소개
+이 프로젝트는 **Spring Boot**와 **Thymeleaf**를 사용하여 개발된 커뮤니티 게시판 애플리케이션입니다.  
+사용자는 **새로운 커뮤니티를 생성**, **게시글을 작성**, **다른 사용자의 게시글을 조회**할 수 있습니다.  
 
-**Note:** This project was developed using Microsoft Visual Studio Code. Compatibility issues may arise if working with IntelliJ IDEA.
+> **참고**: 본 프로젝트는 **Microsoft Visual Studio Code**에서 개발되었습니다.  
+> IntelliJ IDEA에서 실행할 경우 **호환성 문제가 발생할 가능성이 있습니다.**  
 
-## Changelog
-- **2024.10.2**: Uploaded to GitHub.
-- **Current Errors**: No known or detected errors at this time.
+### 기술 스택
+- **Spring Boot**: 독립 실행형(Spring 기반) 애플리케이션을 빠르게 개발할 수 있는 프레임워크
+- **H2 Database**: 개발 및 테스트용으로 사용되는 인메모리 데이터베이스
+- **JPA (Java Persistence API)**: 관계형 데이터 관리를 위한 ORM(Object Relational Mapping) 기술
+- **Thymeleaf**: 서버 사이드에서 HTML을 동적으로 생성하는 템플릿 엔진
+- **Java 17**: 최신 Java 기능을 활용하여 개발
 
-## Features
-- Create communities
-- View a list of communities
-- Create posts
-- View posts within specific communities
-- Edit and delete posts
+### 핵심 기능
+- **사용자 관리**: 회원 가입, 로그인, 로그아웃 기능, 사용자 프로필 수정 및 삭제
+- **질문 관리**: 질문 작성, 조회, 수정, 삭제 기능
+- **답변 관리**: 질문에 대한 답변 작성, 수정, 삭제 기능
+- **동적 웹 페이지**: Thymeleaf를 활용하여 동적으로 콘텐츠를 생성
+- **MariaDB 데이터베이스 관리**: 관계형 데이터베이스를 사용하여 데이터 저장, SQL 쿼리를 통해 데이터 확인 가능  
 
-## Tech Stack
-- **Backend**: Java, Spring Boot
-- **Frontend**: Thymeleaf, Bootstrap
-- **Database**: H2 (development and testing), MariaDB (production)
+---
 
-## Project Structure
+## 📂 프로젝트 구조  
+```
+src
+├── main
+│   ├── java
+│   │   └── com.mysite.community
+│   │       ├── controller      # HTTP 요청을 처리하는 컨트롤러 계층
+│   │       ├── entity          # 데이터베이스 테이블과 매핑되는 엔터티 클래스
+│   │       ├── repository      # 데이터베이스 접근을 처리하는 레포지토리 계층
+│   │       ├── service         # 비즈니스 로직을 처리하는 서비스 계층
+│   │       └── CommunityBoardApplication.java # Spring Boot 애플리케이션 진입점
+│   ├── resources
+│   │   ├── templates           # Thymeleaf 템플릿 파일 (프론트엔드 UI)
+│   │   ├── application.properties # 애플리케이션 설정 파일
+│   │   └── data.sql             # 초기 데이터 로딩을 위한 SQL 스크립트
+└── test                        # 단위 및 통합 테스트 코드
+```
 
-The project is organized as follows:
+---
 
-- **Controller**: Manages HTTP requests for the application.
-- **Entity**: Contains entity classes mapped to database tables.
-- **Repository**: Handles interactions with the database.
-- **Service**: Processes business logic for the application.
-- **Templates**: Thymeleaf template files for the front end.
+## 🚀 사용 방법  
 
-## How to Use
+### 1) 커뮤니티 생성  
+- `커뮤니티 생성(Create Community)` 버튼을 클릭하여 새로운 커뮤니티를 생성할 수 있습니다.  
 
-Upon accessing the application, users can create a new community by clicking the "Create Community" button. After creating a community, users can click on it to view a list of posts in that community. They can also add new posts by clicking the "Create Post" button. By clicking on a post title, users can view, edit, or delete the post's content.
+### 2) 커뮤니티 목록 조회  
+- 생성된 커뮤니티 목록이 표시되며, 원하는 커뮤니티를 클릭하면 해당 커뮤니티의 게시글을 확인할 수 있습니다.  
+
+### 3) 게시글 작성  
+- `게시글 작성(Create Post)` 버튼을 클릭하여 새로운 게시글을 작성할 수 있습니다.  
+
+### 4) 게시글 조회 및 수정/삭제  
+- 게시글 제목을 클릭하면 상세 내용을 확인할 수 있으며,  
+  **게시글 수정 및 삭제** 기능도 제공합니다.  
+
+---
